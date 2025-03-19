@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+tensorflow
+opencv-python
+PyPDF2
+python-docx
+pdfplumber
+pickle-mixin
+joblib
+requests
+beautifulsoup4
+spacy
