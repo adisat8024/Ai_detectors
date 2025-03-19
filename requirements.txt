@@ -11,3 +11,4 @@ joblib
 requests
 beautifulsoup4
 spacy
+cv2
