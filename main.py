@@ -395,7 +395,7 @@ elif app_mode == "AI Text Detector":
                 review_df.to_csv(REVIEWS_FILE, mode='a', header=not os.path.exists(REVIEWS_FILE), index=False)
 
                 st.success("✅ Review Submitted Successfully!")
-                del st.session_state["news_result"]  # Reset after submission
+                del st.session_state["text_result"]  # Reset after submission
             else:
                 st.warning("⚠️ Please fill in all fields before submitting.")
 
