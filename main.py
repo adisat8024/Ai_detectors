@@ -254,7 +254,7 @@ if app_mode == "AI Image Detector":
                 selected_feedback = st.session_state["feedback"].get(uploaded_file.name)
                 
                 if selected_feedback:  # Ensures user selects an option
-                    feedback_df = pd.DataFrame([[uploaded_file.name, result_text, selected_feedback]], 
+                    feedback_df = pd.DataFrame([['AI Image Detection', result_text, selected_feedback]], 
                                 columns=["File", "Result", "Feedback"])
                     feedback_df.to_csv(FEEDBACK_FILE, mode='a', header=not os.path.exists(FEEDBACK_FILE), index=False)
                     st.success("Feedback Submitted! ✅")
