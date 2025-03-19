@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 tensorflow
-opencv-python
+opencv-python-headless
 PyPDF2
 python-docx
 pdfplumber
@@ -11,4 +11,3 @@ joblib
 requests
 beautifulsoup4
 spacy
-cv2
