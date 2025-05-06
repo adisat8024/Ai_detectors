@@ -223,8 +223,7 @@ if app_mode == "AI Image Detector":
         for uploaded_file in uploaded_files:
             file_name = uploaded_file.name
             file_extension = os.path.splitext(file_name)[1].lower()  # Normalize to lowercase
-            st.write(f"Debug: File name: {file_name}")
-            st.write(f"Debug: Detected extension: {file_extension}")
+            st.write(f"File name: {file_name}")
 
             # Manually validate the extension
             allowed_extensions = [".jpg", ".jpeg", ".png"]
