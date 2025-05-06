@@ -217,10 +217,20 @@ st.session_state["theme"] = theme_selection
 # 📌 **AI Image Detector**
 if app_mode == "AI Image Detector":
     st.title("🖼️ AI-Generated Image Detector")
-    uploaded_files = st.file_uploader("Upload images...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload images...", accept_multiple_files=True)
 
     if uploaded_files:
         for uploaded_file in uploaded_files:
+            file_name = uploaded_file.name
+            file_extension = os.path.splitext(file_name)[1].lower()  # Normalize to lowercase
+            st.write(f"Debug: File name: {file_name}")
+            st.write(f"Debug: Detected extension: {file_extension}")
+
+            # Manually validate the extension
+            allowed_extensions = [".jpg", ".jpeg", ".png"]
+            if file_extension not in allowed_extensions:
+                st.error(f"Invalid file extension for {file_name}. Please upload a .jpg, .jpeg, or .png file.")
+                continue
             file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
             image = cv2.imdecode(file_bytes, 1)
             st.image(image, caption="Uploaded Image", use_column_width=True)
