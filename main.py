@@ -216,7 +216,7 @@ st.session_state["theme"] = theme_selection
 
 # 📌 **AI Image Detector**
 if app_mode == "AI Image Detector":
-    st.title("🖼️ AI-Generated Image Detector")
+    st.title("🖼️ Aditya")
     uploaded_files = st.file_uploader("Upload images...", accept_multiple_files=True)
 
     if uploaded_files:
